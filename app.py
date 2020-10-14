@@ -19,8 +19,11 @@ class User(db.Model):
   def __init__(self, name, email):
     self.name = name
     self.email = email
-
-
+    
+  def __repr__(self, name, email):
+    self.name = name
+    self.email = email
+    
 @app.route('/', methods=['GET'])
 def index():
   return render_template('index.html', users=User.query.all())
