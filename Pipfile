@@ -15,7 +15,7 @@ flask = "*"
 flask-sqlalchemy = "*"
 "psycopg2" = "*"
 gunicorn = "*"
-
+SQLAlchemy=="*"
 
 [requires]
 
