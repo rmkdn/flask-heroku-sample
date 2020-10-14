@@ -10,12 +10,12 @@ DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////tmp/flask_app.db')
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 db = SQLAlchemy(app)
 
-db_URI = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
-engine = create_engine(db_URI)
-api = Api(server)
-db = SQLAlchemy()
+#db_URI = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
+#engine = create_engine(db_URI)
+#api = Api(server)
+#db = SQLAlchemy()
 
-db.init_app(server)
+#db.init_app(server)
 
 @server.before_first_request
 def create_tables():
