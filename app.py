@@ -8,7 +8,10 @@ app = Flask(__name__)
 DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////tmp/flask_app.db')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 db = SQLAlchemy(app)
+
 
 #db_URI = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 #engine = create_engine(db_URI)
