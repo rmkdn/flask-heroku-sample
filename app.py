@@ -18,9 +18,9 @@ db = SQLAlchemy(app)
 #api = Api(server)
 #db = SQLAlchemy()
 
-#db.init_app(server)
+db.init_app(app)
 
-#@server.before_first_request
+@app.before_first_request
 def create_tables():
     db.create_all()
 
